@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/newGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#673AB7"
+        android:text="NEW GAME"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="sans-serif-black"
+        android:text="PLAYER 1"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/diceImageView"
+        app:layout_constraintTop_toBottomOf="@id/newGameButton" />
+
+    <TextView
+        android:id="@+id/player1ScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="0"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@id/player1TextView"
+        app:layout_constraintStart_toStartOf="@id/player1TextView"
+        app:layout_constraintTop_toBottomOf="@+id/player1TextView" />
+
+
+    <TextView
+        android:id="@+id/player2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:text="PLAYER 2"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/diceImageView"
+        app:layout_constraintTop_toBottomOf="@id/newGameButton" />
+
+
+    <TextView
+        android:id="@+id/player2ScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="0"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@id/player2TextView"
+        app:layout_constraintStart_toStartOf="@id/player2TextView"
+        app:layout_constraintTop_toBottomOf="@+id/player2TextView" />
+
+    <ImageView
+        android:id="@+id/diceImageView"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newGameButton"
+       android:src="@drawable/dado1" />
+
+    <Button
+        android:id="@+id/rollDiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#4CAF50"
+        android:text="ROLL DICE"
+        app:layout_constraintEnd_toEndOf="@id/diceImageView"
+        app:layout_constraintStart_toStartOf="@id/diceImageView"
+        app:layout_constraintTop_toBottomOf="@+id/diceImageView" />
+
+    <Button
+        android:id="@+id/holdButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF9800"
+        android:text="HOLD"
+        app:layout_constraintEnd_toEndOf="@id/rollDiceButton"
+        app:layout_constraintStart_toStartOf="@id/rollDiceButton"
+        app:layout_constraintTop_toBottomOf="@+id/rollDiceButton" />
+
+    <TextView
+        android:id="@+id/current1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="CURRENT"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@id/player1TextView"
+        app:layout_constraintStart_toStartOf="@id/player1TextView"
+        app:layout_constraintTop_toTopOf="@id/rollDiceButton" />
+
+    <TextView
+        android:id="@+id/current2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="CURRENT"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@id/player2TextView"
+        app:layout_constraintStart_toStartOf="@id/player2TextView"
+        app:layout_constraintTop_toTopOf="@id/rollDiceButton" />
+
+    <TextView
+        android:id="@+id/currentScore1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/current1TextView"
+        app:layout_constraintStart_toStartOf="@id/current1TextView"
+        app:layout_constraintTop_toBottomOf="@+id/current1TextView" />
+
+    <TextView
+        android:id="@+id/currentScore2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/current2TextView"
+        app:layout_constraintStart_toStartOf="@id/current2TextView"
+        app:layout_constraintTop_toBottomOf="@+id/current2TextView" />
+
+    <TextView
+        android:id="@+id/player1WinsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:alpha="0"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="WINNER!"
+        android:textColor="#009688"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/player1TextView"
+        app:layout_constraintEnd_toEndOf="@id/player1TextView"
+        app:layout_constraintStart_toStartOf="@id/player1TextView" />
+
+    <TextView
+        android:id="@+id/player2WinsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:alpha="0"
+        android:fontFamily="casual"
+        android:text="WINNER!"
+        android:textColor="#009688"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/player2TextView"
+        app:layout_constraintEnd_toEndOf="@id/player2TextView"
+        app:layout_constraintStart_toStartOf="@id/player2TextView" />
+
+    <ImageView
+        android:id="@+id/player1LineImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="@id/player1TextView"
+        app:layout_constraintStart_toStartOf="@id/player1TextView"
+        app:layout_constraintTop_toBottomOf="@id/player1TextView"
+        app:srcCompat="@drawable/linea" />
+
+    <ImageView
+        android:id="@+id/player2LineImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="@id/player2TextView"
+        app:layout_constraintStart_toStartOf="@id/player2TextView"
+        app:layout_constraintTop_toBottomOf="@id/player2TextView"
+        app:srcCompat="@drawable/linea" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
